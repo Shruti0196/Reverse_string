@@ -1,0 +1,67 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    {% extends 'base.html' %}
+    
+    {% block title %}
+  Document
+    {% endblock title %}
+<!-- </head>
+<body> -->
+    
+{% block others %}
+
+<style>
+    
+    h3{
+        color:red;
+    }
+    *{
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+
+{% endblock others %}
+
+{% block content %}
+<!-- <h1>Login Now</h1> -->
+<nav class="navbar navbar-light bg-secondary">
+    <div class="container-fluid py-3 bg-secondary">
+      <span class="navbar-brand mb-0 h1 px-3 py-6 bg-secondary "><h1 style="color:white; background-color:	#6c757d">Login Now</h1></span>
+    </div>
+  </nav>
+  <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert"> -->
+    {% for message in messages %}
+    <p style="padding-left: 10%;color: red; font-size:18px">{{message}}</p>
+    {% endfor %}
+
+    <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div> -->
+     
+  
+
+<br><div style="padding-left: 10%; padding-right: 10%;">
+<form action="login" method="POST">
+    {% csrf_token %}
+  
+    <div class="mb-3">
+        
+        <label  class="col-6">Username</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="username"/>
+      
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password"/>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form> </div> 
+
+{% endblock content %}
+<!-- </body>
+</html> -->

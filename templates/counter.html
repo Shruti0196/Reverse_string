@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  {% csrf_token %}
+<style>
+    /* *{
+        background-color: rgb(240, 238, 235);
+    }
+    h1{
+        text-align: center;
+        color: rgb(218, 82, 67);
+    }
+    h3{
+        text-align: end;
+    } */
+</style>
+<nav class="navbar navbar-light bg-secondary">
+    <div class="container-fluid py-3 bg-secondary">
+      <span class="navbar-brand mb-0 px-3 py-6 bg-secondary "><p style="padding-left: 10%; font-size:28px ; color:white; background-color:	#6c757d">Reverse String</p></span>
+      <!-- <h3><a href='logout'>Log out</a></h3> -->
+      <div style="padding-right: 3%;">
+      <!-- <a href="logout"><button type="button" class="btn btn-light" >Log out</button></a> -->
+    </div>
+    </div>
+  </nav>
+<!-- <h1 style="font-size:45px;"></h1> -->
+
+
+
+<!-- <hr> -->
+<!-- <p>Input your text below:</p> -->
+<br>
+<div style="padding-left: 4%;font-size:18px;padding-right: 10%;">
+<form method="" action="result">
+
+    <div class="mb-3">
+        <label class="form-label">Input your text below:</label><br>
+        <textarea name='text' rows="2" cols="125" style="font-size:15px;"></textarea>
+ 
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>  
+{% if number %}
+<p style="text-align:center;font-size:28px;">Reverse : <strong>{{number}}</strong></p>
+{% endif %}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
